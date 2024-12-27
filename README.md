@@ -1,1 +1,1 @@
-I worked on cleaning, formatting, and splitting the bank_marketing.csv file, which contains data from a recent marketing campaign aimed at encouraging customers to take out personal loans. I ensured the dataset adhered to the specified structure and data types, and I saved the final results into three separate CSV files, ready for further analysis
+
