@@ -1,0 +1,121 @@
+rm(list=ls())
+library(tidyquant)
+library(tidyverse)
+library(tsibble)
+library(ggthemes)
+library(gt)
+library(fpp3)
+
+tickers<-c("F")
+
+data_stocks<-tq_get(tickers,
+                    from = '1956-01-15',
+                    to = '2024-10-01',
+                    get = 'stock.prices')
+
+year(data_stocks$date)
+data_stocks %>% mutate(YearMonth=yearmonth(ymd((date)))) %>%
+  group_by(YearMonth) %>% 
+  summarise(Adjusted=mean(adjusted, na.rm=T)) %>% 
+  tsibble(index=YearMonth)-> SB_ts
+
+SB_ts %>% autoplot()
+
+SB_ts %>%
+  filter_index("2014 Jan"~.) -> SB_ts2
+
+SB_ts2 %>% autoplot()
+
+SB_ts2 %>% autoplot(Adjusted) +
+  theme_clean() + labs(title="Monthly Stock Prices",
+                       subtitle="2014 Jan - 2024 Sep",
+                       x="Quarter",
+                       y="")
+
+#Autocorrelation fuction: above blue line is significant (8th autocorrelation and beyond are not significant)
+SB_ts2 %>% ACF(Adjusted) %>% autoplot() + theme_clean()
+SB_ts2 %>% gg_lag(lags=2, geom="point") + theme_bw()
+
+SB_ts2 %>% model(STL(Adjusted~trend()+season())) %>% components() %>% autoplot()
+
+
+SB_ts2 %>% filter_index(.~"2023 Dec") -> train
+SB_ts2 %>% filter_index("2024 Jan"~.) -> test
+
+train %>% model(TSLM=TSLM(Adjusted~trend()+season()),
+                TSLM2=TSLM(Adjusted~trend()+ I(trend()^2) + season()),
+                ETS=ETS(Adjusted),
+                ARIMA=ARIMA(Adjusted)) -> fit
+
+fit  %>% accuracy() 
+
+# Information Criterion
+fit %>% glance() %>%
+  select('.model',"AIC","AICc","BIC")
+
+# Winkler
+fit %>% forecast(test) %>%
+  accuracy(SB_ts2, list(winkler = winkler_score))
+
+# Cross Validation
+SB_ts2 %>% stretch_tsibble(.init = 20, .step=1) %>%
+  model(TSLM=TSLM(Adjusted~trend()+season()),
+        TSLM2=TSLM(Adjusted~trend()+ I(trend()^2) + season()),
+        ARIMA=ARIMA(Adjusted),
+        ETS=ETS(Adjusted)) %>% 
+  forecast(h=1) %>%
+  accuracy(SB_ts2) 
+
+
+salesfords<-read_csv('C:/Users/fiona/OneDrive/Documents/Stochastic_Modeling/sales_ts2s.csv')
+
+salesfords %>% 
+  mutate(period=yearmonth(my(YearMonth))) %>%
+  as_tsibble(index=period) ->sales_ts
+
+##NEED TO UPDATE REST
+
+sales_ts %>%
+  filter_index("2014 Jan"~.) -> sales_ts2
+
+sales_ts2 %>% autoplot()
+
+sales_ts2 %>% autoplot(Vehicles) +
+  theme_clean() + labs(title="Monthly Stock Prices",
+                       subtitle="2014 Jan - 2024 Sep",
+                       x="Quarter",
+                       y="")
+
+#Autocorrelation fuction: above blue line is significant (8th autocorrelation and beyond are not significant)
+sales_ts2 %>% ACF(Vehicles) %>% autoplot() + theme_clean()
+sales_ts2 %>% gg_lag(lags=2, geom="point") + theme_bw()
+
+sales_ts2 %>% model(STL(Vehicles~trend()+season())) %>% components() %>% autoplot()
+
+sales_ts2 %>% filter_index(.~"2023 Dec") -> train
+sales_ts2 %>% filter_index("2024 Jan"~.) -> test
+
+train %>% model(TSLM=TSLM(Vehicles~trend()+season()),
+                TSLM2=TSLM(Vehicles~trend()+ I(trend()^2) + season()),
+                ETS=ETS(Vehicles),
+                ARIMA=ARIMA(Vehicles)) -> fit
+
+fit  %>% accuracy() 
+
+# Information Criterion
+fit %>% glance() %>%
+  select('.model',"AIC","AICc","BIC")
+
+# Winkler
+fit %>% forecast(test) %>%
+  accuracy(sales_ts2, list(winkler = winkler_score))
+
+# Cross Validation
+sales_ts2 %>% stretch_tsibble(.init = 20, .step=1) %>%
+  model(TSLM=TSLM(Vehicles~trend()+season()),
+        TSLM2=TSLM(Vehicles~trend()+ I(trend()^2) + season()),
+        ARIMA=ARIMA(Vehicles),
+        ETS=ETS(Vehicles)) %>% 
+  mutate(Combo=0.5*ARIMA+0.5*ETS) %>% 
+  forecast(h=1) %>%
+  accuracy(sales_ts2) 
