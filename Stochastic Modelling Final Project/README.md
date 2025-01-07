@@ -19,7 +19,7 @@ This graph shows the 5 month forecast for Ford's stock price using an ETS model.
 
 
 
-![Alt Text](https://github.com/Thokozile23/William-and-Mary-Portfolio/blob/67cb16b665faf1aa0036afa1497ce81ef6bdbf19/ford%20graph2.png)
+![Alt Text](https://github.com/Thokozile23/William-and-Mary-Portfolio/blob/1b422ed58d7f2a9536b126437b835444d26c0ccc/Stochastic%20Modelling%20Final%20Project/ford%20graph2.png)
 This graph also represents a 5-month forecast of Ford vehicle sales using an ETS model. The plot displays the number of vehicles sold over time, with a forecast for the upcoming months. The solid line shows the historical data from 2014-2024, which shows a pattern and variability over time. Once again, around 2020, we see a dip in sales, followed lower variability, then by a sharp increase near 2025.
 
 **Expected Outcome**
