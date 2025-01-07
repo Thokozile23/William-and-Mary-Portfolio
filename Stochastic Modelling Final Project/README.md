@@ -13,7 +13,7 @@ ETS captures error, trend, and seasonality. It is useful when you want to model 
 ARIMA looks at how past values and data can influence future ones (autocorrelation). It is useful for making accurate forecasts when the data shows patterns of autocorrelation but may not have strong seasonality.
 
 
-![Alt Text](https://github.com/Thokozile23/William-and-Mary-Portfolio/blob/3756aa5b00e29685f8867fea7c5cdda1c6a0b549/ford%20graph1.png)
+![Alt Text](https://github.com/Thokozile23/William-and-Mary-Portfolio/blob/1272818a13e925c2488efba772159999bb0f1263/Stochastic%20Modelling%20Final%20Project/ford%20graph1.png)
 
 This graph shows the 5 month forecast for Ford's stock price using an ETS model. The confidence intervals are represented by shaded regions. The historical stock prices are plotted from 2014 to 2024, showing a significant spike around 2020, followed by a stabilization period. The forecast shows a prediction with uncertainty as represented by the widening bands, illustrating potential variability in the stock price over the forecast period.
 
