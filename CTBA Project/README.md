@@ -2,7 +2,7 @@
 
 **Overview**
 
-This project aims to comprehensively analyze retail data within the “Cheese” category across four major grocery retailers. Spanning approximately 1,200 stores and including data from the COVID-19 years, the project seeks to understand demand and supply dynamics during a period of significant disruption. The ultimate goal is to generate actionable insights and recommendations based on the provided data and independent research, helping to understand customer behavior better and to build supply chain resilience. Utilized three datasets.
+This project aims to comprehensively analyze retail data within the “Cheese” category across four major grocery retailers. Spanning approximately 1,200 stores and including data from the COVID-19 years, the project seeks to understand demand and supply dynamics during a period of significant disruption. The ultimate goal is to generate actionable insights and recommendations based on the provided data and independent research, helping to understand customer behavior better and to build supply chain resilience. We Utilized three datasets.
 
 **Exploratory Data Analysis**
 
