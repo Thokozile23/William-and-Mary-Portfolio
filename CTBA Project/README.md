@@ -4,6 +4,18 @@
 
 This project aims to comprehensively analyze retail data within the “Cheese” category across four major grocery retailers. Spanning approximately 1,200 stores and including data from the COVID-19 years, the project seeks to understand demand and supply dynamics during a period of significant disruption. The ultimate goal is to generate actionable insights and recommendations based on the provided data and independent research, helping to understand customer behavior better and to build supply chain resilience. Utilized three datasets 
 
+
+![Alt Text](path/to/image.png)
+![Alt Text](path/to/image.png)
+![Alt Text](path/to/image.png)
+![Alt Text](path/to/image.png)
+![Alt Text](path/to/image.png)
+![Alt Text](path/to/image.png)
+![Alt Text](path/to/image.png)
+![Alt Text](path/to/image.png)
+![Alt Text](path/to/image.png)
+
+
 **Exploratory Data Analysis**
 Finding what happened with cheese consumption before and during the paandemic.There are higher spikes on the gold lines indicating an increase in the year 2021 of  the quantity of cheese sold and which indicates an increase in consumption of cheese during covid as compared to pre-covid.
 Made a visual presentation as shown below Indicating the cheese shipped against cheese not shipped to look at supply of cheese against labour shortages.The spike, highlighted, coincides with the period when the CDC mandates were first enacted, leading to significant disruptions in production and distribution. This shortage had a ripple effect throughout the entire supply chain, further delaying shipments and reducing availability at retail levels.
