@@ -59,6 +59,7 @@ The cybersecurity attack on Saputo Cheese USA not only disrupted production but 
 ![Alt Text](https://github.com/Thokozile23/William-and-Mary-Portfolio/blob/cbfe274631ee37149216375b5d1eab42868ea689/CTBA%20Project/pic9.png)
 
 **Conclusion**
+
 These instances such as the dry ice and labor shortages that halted cheese shipments were incredibly wasteful.
 Cows don’t stop making milk so there’s no halt in supply, only overflow & waste.Our group wanted to find ways for dairy farms to stop this waste the next time something like a pandemic halts the distribution of product.We need to find ways to export this product locally when national shipment isn’t an option.
 We could bring back the milkman and do door-to-door contactless milk deliveries. Donate extra product to homeless shelters, local food shelters, and community kitchens. Dairy farmers can also repurpose this product into things for the farm such as livestock feed and compost for their crops.When dry ice isn’t an option, coolers and ice can keep these products cold and safe when transporting locally.There are many ways we can stay sustainable and prevent product waste.
