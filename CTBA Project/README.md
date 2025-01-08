@@ -9,7 +9,7 @@ This project aims to comprehensively analyze retail data within the “Cheese”
 
 
 
-![Alt Text]()
+![Alt Text](https://github.com/Thokozile23/William-and-Mary-Portfolio/blob/4aa6579a4ebe2dab3475a61ee8f8e3b2977fdbcb/CTBA%20Project/pic8.png)
 
 
 
