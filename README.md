@@ -46,8 +46,9 @@ Throughout my studies, I’ve worked with a wide range of tools and technologies
 
 This repository includes various projects and examples that demonstrate my understanding of business analytics. Some of the projects I've done so far include:
 
-- **Predicting Heart Attack Disease**: Using machine learning models to predict which customers are likely to leave a business.
-- **Cheese Market Analysis During Covid_19**: Analyzing historical sales data to predict future demand and optimize inventory levels.
+- **Predicting Heart Attack Disease**: Using machine learning models to predict patients likelihood to have a heart attack based on several factors.
+- **Cheese Market Analysis During Covid_19**: Analyzing cheese shortages pre-pandemic during and after the pandemic.
+- **Ford Stock Pitch**: Simulated ford stock prices to predict its investment projections in the bear, base and bull case scenarios.
 
 
 Each project is an opportunity to apply the concepts learned in class and demonstrates how business analytics can solve real-world problems.
@@ -56,4 +57,4 @@ Each project is an opportunity to apply the concepts learned in class and demons
 
 My time as a Business Analytics student at William & Mary is equipping me with the knowledge and skills to analyze complex datasets, make data-driven decisions, and use analytics to solve business challenges. With a strong foundation in both the technical and strategic aspects of business analytics, I’m ready to apply these skills to real-world problems in various industries. 
 
-Feel free to explore the projects and learn more about my work through this repository!
+Feel free to explore the projects and learn more about my work through this repository!  or contact me at thokomunthali22@gmail.com
